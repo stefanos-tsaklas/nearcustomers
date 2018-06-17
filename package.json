@@ -1,0 +1,14 @@
+{
+  "name": "nearcustomers",
+  "version": "1.0.0",
+  "description": "It finds the customers near you, sorted by id",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Stefanos Tsaklas",
+  "license": "ISC"
+}

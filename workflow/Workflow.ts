@@ -9,7 +9,7 @@ export default class Workflow {
     
     public Solve(): void {
 
-        var customers =this.customerLoader.LoadCustomers();
+        var customers = this.customerLoader.LoadCustomers();
 
         this.filters.forEach(f => {
             customers = f.Filter(customers);

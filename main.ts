@@ -6,7 +6,7 @@ import SortCustomersByIdFilter from "./filters/SortCustomersByIdFilter";
 import PrintCustomersAction from "./actions/PrintCustomersAction";
 import Workflow from "./workflow/Workflow";
 
-const INTERCOM_DUBLIN_OFFICE: Coordinate = { latitude: 53.339428, longitude: -6.257664 };
+const DUBLIN_COORDINATES: Coordinate = { latitude: 53.339428, longitude: -6.257664 };
 const fileinput = process.argv[2] || "input.txt";
 const distanceKm = parseInt(process.argv[3] || "100");
 
@@ -15,7 +15,7 @@ const distanceCalculator = new DistanceCalculatorImpl();
 const filters = [
     new CloseCustomersFilter(
         distanceCalculator,
-        INTERCOM_DUBLIN_OFFICE,
+        DUBLIN_COORDINATES,
         distanceKm),
     new SortCustomersByIdFilter()
 ];

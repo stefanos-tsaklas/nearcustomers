@@ -1,10 +1,10 @@
-import CustomerLoaderI from "../loader/CustomerLoaderI";
-import CustomerFilterI from "../filters/CustomerFilterI";
-import PostActionI from "../interfaces/PostActionI";
+import CustomerLoader from '../interfaces/CustomerLoader';
+import CustomerFilter from '../interfaces/CustomerFilter';
+import PostAction from '../interfaces/PostAction';
 
 export default class Workflow {
 
-    constructor(private customerLoader: CustomerLoaderI, private filters: CustomerFilterI[], private postActions: PostActionI[]) {
+    constructor(private customerLoader: CustomerLoader, private filters: CustomerFilter[], private postActions: PostAction[]) {
     }
     
     public Solve(): void {

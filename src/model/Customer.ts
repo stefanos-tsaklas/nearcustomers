@@ -1,4 +1,4 @@
-import Coordinate from "../model/Coordinate";
+import Coordinate from '../model/Coordinate';
 
 export default class Customer {
 
@@ -9,7 +9,7 @@ export default class Customer {
     public constructor (userId: number, name: string, longitude: number, latitude: number) {
         this.userId = userId;
         this.name = name;
-        this.location = { "longitude": longitude, "latitude": latitude };
+        this.location = { 'longitude': longitude, 'latitude': latitude };
     }
 
     public get UserId(): number

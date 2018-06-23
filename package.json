@@ -4,7 +4,10 @@
   "description": "It finds the customers near you, sorted by id",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec --compilers ts:ts-node/register ./tests/*.spec.ts"
+    "demo": "ts-node ./src/main.ts input.txt",
+    "lint": "./node_modules/.bin/eslint ./src/**\\*.ts",
+    "test": "mocha --reporter spec --compilers ts:ts-node/register ./test/*.spec.ts",
+    "postinstall": "typings install"
   },
   "keywords": [
     "Node"
@@ -15,6 +18,7 @@
     "@types/chai": "^4.1.4",
     "@types/chai-spies": "^1.0.0",
     "@types/mocha": "^5.2.3",
+    "@types/node": "^10.3.5",
     "@types/sinon": "^5.0.1",
     "chai": "^4.1.2",
     "chai-spies": "^1.0.0",

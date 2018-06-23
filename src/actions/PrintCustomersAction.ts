@@ -1,5 +1,5 @@
-import Customer from "../model/Customer";
-import PostActionI from "../interfaces/PostActionI";
+import Customer from '../model/Customer';
+import PostActionI from '../interfaces/PostAction';
 
 export default class PrintCustomersAction implements PostActionI {
 

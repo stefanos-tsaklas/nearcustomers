@@ -1,8 +1,7 @@
-import CustomerFinderI from "../filters/CustomerFinderI";
-import Customer from "../model/Customer";
-import CustomerLoaderI from "./CustomerLoaderI";
+import Customer from '../model/Customer';
+import CustomerLoader from '../interfaces/CustomerLoader';
 
-export default class CustomerLoaderFileSystem implements CustomerLoaderI {
+export default class CustomerLoaderFileSystem implements CustomerLoader {
 
     public constructor(private filepath: string) {
     }

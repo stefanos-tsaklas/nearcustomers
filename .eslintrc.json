@@ -1,0 +1,13 @@
+{
+    "extends": [
+      "typescript"
+    ],
+    "plugins": ["filenames"],
+    "env": {    
+      "node": true
+    },
+    "rules": {
+      "filenames/no-index": "error",
+      "filenames/match-exported": ["error", "kebab"]
+    }
+  }

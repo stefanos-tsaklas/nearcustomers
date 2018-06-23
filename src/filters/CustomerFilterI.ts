@@ -1,4 +1,4 @@
-import Customer from "../model/Customer";
+import Customer from '../model/Customer';
 
 export default interface CustomerFilterI {
     Filter(customers: Customer[]): Customer[];

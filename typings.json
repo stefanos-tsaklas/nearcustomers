@@ -1,0 +1,10 @@
+{
+  "globalDependencies": {
+    "jasmine": "registry:dt/jasmine#2.5.2+20170317130948",
+    "mocha": "registry:dt/mocha#2.2.5+20170311011848"
+  },
+  "dependencies": {
+    "chai": "registry:npm/chai#3.5.0+20160723033700",
+    "@types/node": "^8.0.4"
+  }
+}

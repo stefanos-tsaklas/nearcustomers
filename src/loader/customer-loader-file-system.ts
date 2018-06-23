@@ -1,5 +1,5 @@
-import Customer from '../model/Customer';
-import CustomerLoader from '../interfaces/CustomerLoader';
+import Customer from '../model/customer';
+import CustomerLoader from '../interfaces/customer-loader';
 
 export default class CustomerLoaderFileSystem implements CustomerLoader {
 

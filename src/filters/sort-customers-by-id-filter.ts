@@ -1,7 +1,5 @@
-import DistanceCalculatorImpl  from '../distance/DistanceCalculatorImpl';
-import Customer from '../model/Customer';
-import Coordinate from '../model/Coordinate';
-import CustomerFilter from '../interfaces/CustomerFilter';
+import Customer from '../model/customer';
+import CustomerFilter from '../interfaces/customer-filter';
 
 export default class SortCustomersByIdFilter implements CustomerFilter {
 

@@ -1,7 +1,7 @@
-import DistanceCalculator from '../interfaces/DistanceCalculator';
-import Customer from '../model/Customer';
-import Coordinate from '../model/Coordinate';
-import CustomerFilterI from './CustomerFilterI';
+import DistanceCalculator from '../interfaces/distance-calculator';
+import Customer from '../model/customer';
+import Coordinate from '../model/coordinate';
+import CustomerFilterI from './customer-filter';
 
 export default class CloseCustomersFilter implements CustomerFilterI {
 

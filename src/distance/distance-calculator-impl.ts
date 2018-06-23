@@ -1,5 +1,5 @@
-import Coordinate from '../model/Coordinate';
-import DistanceCalculator from '../interfaces/DistanceCalculator';
+import Coordinate from '../model/coordinate';
+import DistanceCalculator from '../interfaces/distance-calculator';
 
 export default class DistanceCalculatorImpl extends DistanceCalculator {
     
@@ -7,10 +7,10 @@ export default class DistanceCalculatorImpl extends DistanceCalculator {
     }
 
     GetDistanceInKilometers(c1: Coordinate, c2: Coordinate): number {
-        let lat1Rads = super.FromDegreesToRadians(c1.latitude);
-        let lat2Rads = super.FromDegreesToRadians(c2.latitude);
-        let latDiffRads = super.FromDegreesToRadians(c2.latitude - c1.latitude);
-        let longDiffRads = super.FromDegreesToRadians(c2.longitude - c1.longitude);
+        let lat1Rads = this.FromDegreesToRadians(c1.latitude);
+        let lat2Rads = this.FromDegreesToRadians(c2.latitude);
+        let latDiffRads = this.FromDegreesToRadians(c2.latitude - c1.latitude);
+        let longDiffRads = this.FromDegreesToRadians(c2.longitude - c1.longitude);
         let a = Math.sin(latDiffRads / 2) * Math.sin(latDiffRads / 2) +
           Math.cos(lat1Rads) * Math.cos(lat2Rads) *
           Math.sin(longDiffRads/ 2) * Math.sin(longDiffRads / 2);

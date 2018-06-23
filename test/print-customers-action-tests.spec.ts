@@ -1,9 +1,9 @@
-import PrintCustomersAction from '../src/actions/PrintCustomersAction';
-import Customer from '../src/model/Customer';
+import Customer from '../src/model/customer';
 import * as sinon from 'sinon';
 import * as chai from 'chai';
 import * as chaiSpies from 'chai-spies';
 import * as sinonChai from 'sinon-chai';
+import PrintCustomersAction from '../src/actions/print-customers-action';
 
 chai.use(chaiSpies);
 

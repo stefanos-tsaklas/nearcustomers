@@ -1,10 +1,10 @@
-import Coordinate from './model/Coordinate';
-import CustomerLoaderFileSystem from './loader/CustomerLoaderFileSystem';
-import DistanceCalculatorImpl from './distance/DistanceCalculatorImpl';
-import CloseCustomersFilter from './filters/CloseCustomersFilter';
-import SortCustomersByIdFilter from './filters/SortCustomersByIdFilter';
-import PrintCustomersAction from './actions/PrintCustomersAction';
-import Workflow from './workflow/Workflow';
+import Coordinate from './model/coordinate';
+import CustomerLoaderFileSystem from './loader/customer-loader-file-system';
+import DistanceCalculatorImpl from './distance/distance-calculator-impl';
+import CloseCustomersFilter from './filters/close-customers-filter';
+import SortCustomersByIdFilter from './filters/sort-customers-by-id-filter';
+import PrintCustomersAction from './actions/print-customers-action';
+import Workflow from './workflow/workflow';
 
 const DUBLIN_COORDINATES: Coordinate = { latitude: 53.339428, longitude: -6.257664 };
 const fileinput = process.argv[2] || 'input.txt';

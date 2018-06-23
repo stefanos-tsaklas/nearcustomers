@@ -5,23 +5,31 @@ import DistanceCalculatorImpl from '../../src/distance/distance-calculator-impl'
 
 chai.use(chaiSpies);
 
-const should = chai.should(), expect = chai.expect;
-
-const sandbox = chai.spy.sandbox();
+const expect = chai.expect;
 
 describe('DistanceCalculatorImpl test suite', () => {
+    const locations = {
+        "prague":       { longitude: 14.4378005, latitude: 50.0755381 },
+        "california":   { longitude: -119.4179324, latitude: 36.778261 }
+    };
 
-  it('calculates zero distance for the same two coordinates' , () => {
+    const tests = [
+        { args: [ locations.prague, locations.prague ], expected: 0 },
+        { args: [ locations.prague, locations.california ], expected: 9349.68 },
+        { args: [ locations.california, locations.prague ], expected: 9349.68 },
+    ];
 
-    // arrange
-    let c1: Coordinate = { longitude: 23, latitude: 44 };
-    let c2: Coordinate = { longitude: 23, latitude: 44 };
-    let calculator = new DistanceCalculatorImpl();
+    tests.forEach(function(test) {
+        it(`correctly calculates distance between ${JSON.stringify(test.args[0])} and ${JSON.stringify(test.args[1])} as ${test.expected}`, function() {
 
-    // act
-    let result = calculator.GetDistanceInKilometers(c1, c2);
+            // arrange
+            let calculator = new DistanceCalculatorImpl();
 
-    // assert
-    expect(result).to.be.equal(0);
-  });
+            // act
+            let result = calculator.GetDistanceInKilometers(test.args[0], test.args[1]);
+
+            // assert
+            expect(result).to.be.closeTo(test.expected, 1);
+        });
+    });
 });

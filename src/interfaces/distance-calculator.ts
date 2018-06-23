@@ -1,7 +1,7 @@
 import Coordinate from '../model/Coordinate';
 
 export default abstract class DistanceCalculator {
-    public static EARTH_RADIUS_M = 6378137;
+    public static EARTH_RADIUS_M = 6371000;
     
     protected abstract GetDistanceInKilometers(c1: Coordinate, c2: Coordinate): number;
 

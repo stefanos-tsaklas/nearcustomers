@@ -1,11 +1,12 @@
 import Customer from '../model/Customer';
-import PostActionI from '../interfaces/PostAction';
+import PostAction from '../interfaces/post-action';
 
-export default class PrintCustomersAction implements PostActionI {
+export default class PrintCustomersAction implements PostAction {
 
-    Process(customers: Customer[]): void {
-        customers.forEach( c => { 
-            console.log(`UserId: ${c.UserId} Name: ${c.Name}`)
+    public Process(customers: Customer[]): void {
+        customers.forEach( c => {
+            // eslint-disable-next-line no-console
+            console.log(`UserId: ${c.UserId} Name: ${c.Name}`);
         });
     }
 }

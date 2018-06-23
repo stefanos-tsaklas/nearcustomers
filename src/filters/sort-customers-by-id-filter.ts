@@ -8,7 +8,7 @@ export default class SortCustomersByIdFilter implements CustomerFilter {
 
     public Filter(customers: Customer[]): Customer[] {
         return customers.sort((c1, c2) => {
-            return c1.UserId - c2.UserId
-        })    
+            return c1.UserId - c2.UserId;
+        });
     }
 }

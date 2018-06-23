@@ -1,10 +1,10 @@
-import CustomerLoader from '../interfaces/CustomerLoader';
-import CustomerFilter from '../interfaces/CustomerFilter';
-import PostAction from '../interfaces/PostAction';
+import CustomerLoader from '../interfaces/customer-loader';
+import CustomerFilter from '../interfaces/customer-filter';
+import PostAction from '../interfaces/post-action';
 
 export default class Workflow {
 
-    constructor(private customerLoader: CustomerLoader, private filters: CustomerFilter[], private postActions: PostAction[]) {
+    public constructor(private customerLoader: CustomerLoader, private filters: CustomerFilter[], private postActions: PostAction[]) {
     }
     
     public Solve(): void {
@@ -17,6 +17,6 @@ export default class Workflow {
 
         this.postActions.forEach(p => {
             p.Process(customers);
-        })
+        });
     }
 }

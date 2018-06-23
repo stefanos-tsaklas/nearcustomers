@@ -1,5 +1,5 @@
-import Customer from '../model/Customer';
+import Customer from '../model/customer';
 
-export default interface CustomerFilterI {
+export default interface CustomerFilter {
     Filter(customers: Customer[]): Customer[];
-}
+};

@@ -6,7 +6,7 @@ export default class DistanceCalculatorImpl extends DistanceCalculator {
     public DistanceCalculatorImpl () {
     }
 
-    GetDistanceInKilometers(c1: Coordinate, c2: Coordinate): number {
+    public GetDistanceInKilometers(c1: Coordinate, c2: Coordinate): number {
         let lat1Rads = this.FromDegreesToRadians(c1.latitude);
         let lat2Rads = this.FromDegreesToRadians(c2.latitude);
         let latDiffRads = this.FromDegreesToRadians(c2.latitude - c1.latitude);

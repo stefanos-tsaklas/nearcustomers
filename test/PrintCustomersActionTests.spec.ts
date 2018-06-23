@@ -1,5 +1,5 @@
-import PrintCustomersAction from '../actions/PrintCustomersAction';
-import Customer from '../model/Customer';
+import PrintCustomersAction from '../src/actions/PrintCustomersAction';
+import Customer from '../src/model/Customer';
 import * as sinon from 'sinon';
 import * as chai from 'chai';
 import * as chaiSpies from 'chai-spies';

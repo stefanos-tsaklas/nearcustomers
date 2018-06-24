@@ -11,6 +11,7 @@
 # Example usage:
     1. npm run demo
     2. npm run demo ./data/input_1.txt 200 32.33 -119.12
+    3. npm run demo <optional input file> <optional distance in km> <optional longitude> <optional latitude>
 
 # Other commands:
     1. npm run test (runs all unit and integration tests)

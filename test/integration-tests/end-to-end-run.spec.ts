@@ -16,7 +16,7 @@ const testData = [
 ];
 
 
-describe('Running solution end to end test suite', () => {
+describe('End to end test suite', () => {
 
     testData.forEach(function(test) {
 

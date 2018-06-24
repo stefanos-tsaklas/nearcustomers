@@ -6,7 +6,7 @@ import SortCustomersByIdFilter from '../../src/filters/sort-customers-by-id-filt
 chai.use(chaiSpies);
 const expect = chai.expect;
 
-describe('SortCustomersById test suite', () => {
+describe('SortCustomersById unit test suite', () => {
 
     it('sorts empty array of customers and returns empty array' , () => {
 

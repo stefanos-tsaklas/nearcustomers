@@ -48,7 +48,7 @@ const testCases = [
         expected: null
     },
     {
-        line: ' ',
+        line: '',
         expected: null
     },
 ];

@@ -7,7 +7,7 @@ import DistanceCalculatorImpl from '../../src/distance/distance-calculator-impl'
 chai.use(chaiSpies);
 const expect = chai.expect;
 
-describe('CloseCustomersFilter test suite', () => {
+describe('CloseCustomersFilter unit test suite', () => {
 
     const MockDistanceInKilometersMethod = function(nearCustomers: Customer[], distanceCriterion: number) {
         return (point1) => {

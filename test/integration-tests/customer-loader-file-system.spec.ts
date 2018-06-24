@@ -31,7 +31,7 @@ const testCases = [
     }
 ];
 
-describe('CustomerLoaderFileSystem test suite', () => {
+describe('CustomerLoaderFileSystem integration test suite', () => {
 
     testCases.forEach(testCase => {
         it(`loads expected customers from ${testCase.fileInput}` , () => {

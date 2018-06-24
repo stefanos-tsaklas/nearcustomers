@@ -1,8 +1,16 @@
 # Instructions:
     1. git clone https://github.com/stefanos-tsaklas/nearcustomers.git
     2. npm install -g ts-node
-    3. ts-node ./main.ts input.txt <optional file name> <optional distance in km>
+    3. npm install
+    4. npm run demo ./main.ts ./data/input.txt <optional file name> <optional distance in km> <optional longitute> <optional latitude>
 
+# Example usage:
+    1. npm run demo
+    2. npm run demo ./data/input_1.txt 112 200 32.33 -119.12
+
+# Other commands:
+    1. npm run test (runs all unit and integration tests)
+    2. npm run lint (lints code in src and test folders)
 
 # Demo:
 ![Alt Text](https://github.com/stefanos-tsaklas/nearcustomers/blob/master/demo.gif)
@@ -13,10 +21,9 @@ so that we can switch implementations for some step, solve similar problems, and
 
 # Assumptions:
 1. All data fits in memory
-2. Input file contains well formed data
+2. Invalid customer records in input file are silently ignored
 
 # TODO:
 
-1. Add  tests
-2. Add different implementations of interfaces (e.g. get input customers or calculate distance by calling api via http)
+1. Add different implementations of interfaces (e.g. get input customers or calculate distance by calling api via http)
 3. Benchmark performance

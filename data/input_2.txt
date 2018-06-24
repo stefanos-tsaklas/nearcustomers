@@ -1,0 +1,15 @@
+{}
+{ "latitude": "54" }
+{ "user_id": 44 }
+
+{ "name": "83.65 km away" }
+
+{ "longitude": "-5.5" }
+{"latitudee": "60", "user_idd": 14, "namee": "1008.13 km away", "longitudeee": "5"}
+{"latitude": "invalid", "user_id": 67 km away", "longitude": "90"}
+{"latitude": "90", "user_id": 67 km away", "longitude": "invalid"}
+garbage
+\n\n\n\n
+
+
+{"latitude": "190", "user_id": 21, "name": "4076.47 km away", "longitude": "90"}

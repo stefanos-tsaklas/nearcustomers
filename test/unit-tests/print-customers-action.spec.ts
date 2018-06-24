@@ -1,68 +1,75 @@
-import Customer from '../../src/model/customer';
-import * as sinon from 'sinon';
 import * as chai from 'chai';
 import * as chaiSpies from 'chai-spies';
-import * as sinonChai from 'sinon-chai';
+import Customer from '../../src/model/customer';
 import PrintCustomersAction from '../../src/actions/print-customers-action';
 
 chai.use(chaiSpies);
 
-const should = chai.should(), expect = chai.expect;
+const expect = chai.expect;
 
-const sandbox = chai.spy.sandbox();
+describe('PrintCustomersAction unit test suite', () => {
 
-describe('PrintCustomersAction test suite', () => {
+    const sandbox = chai.spy.sandbox();
 
-  beforeEach(() => {
-    sandbox.on(console, ['log']);
-  });
+    beforeEach(() => {
+      sandbox.on(console, ['log']);
+    });
 
-  afterEach(() => {
-    sandbox.restore(); // restores original methods
-  })
+    afterEach(() => {
+      sandbox.restore(); // restores original methods
+    })
 
-  it('does not print anything if passed an empty list of customers' , () => {
+    it('does not print anything if passed an empty list of customers' , () => {
 
-    // act
-    let action = new PrintCustomersAction();
-    action.Process([]);
+      // arrange
+      const action = new PrintCustomersAction();
 
-    // assert
-    expect(console.log).not.to.have.been.called;
-  });
+      // act
+      action.Process([]);
 
-  it('calls print once if passes an array with one customer' , () => {
+      // assert
+      // eslint-disable-next-line no-console
+      expect(console.log).not.to.have.been.called;
+    });
 
-    // act
-    let action = new PrintCustomersAction();
-    action.Process([new Customer(1, 'John', 1, 2)]);
+    it('calls print once if passes an array with one customer' , () => {
 
-    // assert
-    expect(console.log).to.have.been.called.once;
-  });
+      // arrange
+      const action = new PrintCustomersAction();
 
-  it('calls print twice if passes an array with two customers' , () => {
+      // act
+      action.Process([new Customer(1, 'John', 1, 2)]);
 
-    // act
-    let action = new PrintCustomersAction();
-    action.Process([new Customer(1, 'John', 1, 2), new Customer(2, 'Doe', 1, 2)]);
+      // assert
+      // eslint-disable-next-line no-console
+      expect(console.log).to.have.been.called.once;
+    });
 
-    // assert
-    expect(console.log).to.have.been.called.twice;
-  });
+    it('calls print twice if passes an array with two customers' , () => {
 
-  it('prints the expected message for one customer' , () => {
+      // arrange
+      const action = new PrintCustomersAction();
 
-    // arrange
-    var customerList = [new Customer(42, 'John', 3, 4)];
-    var expectedMessage = 'UserId: 42 Name: John';
+      // act
+      action.Process([new Customer(1, 'John', 1, 2), new Customer(2, 'Doe', 1, 2)]);
 
-    // act
-    let action = new PrintCustomersAction();
-    action.Process(customerList);
+      // assert
+      // eslint-disable-next-line no-console
+      expect(console.log).to.have.been.called.twice;
+    });
 
-    // assert
-    expect(console.log).to.have.been.called.with(expectedMessage);
-  });
+    it('prints the expected message for one customer' , () => {
 
+      // arrange
+      const customerList = [new Customer(42, 'John', 3, 4)];
+      const expectedMessage = 'UserId: 42 Name: John';
+      const action = new PrintCustomersAction();
+
+      // act
+      action.Process(customerList);
+
+      // assert
+      // eslint-disable-next-line no-console
+      expect(console.log).to.have.been.called.with(expectedMessage);
+    });
 });

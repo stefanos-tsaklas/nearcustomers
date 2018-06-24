@@ -1,26 +1,11 @@
 import Coordinate from './model/coordinate';
-import CustomerLoaderFileSystem from './loader/customer-loader-file-system';
-import DistanceCalculatorImpl from './distance/distance-calculator-impl';
-import CloseCustomersFilter from './filters/close-customers-filter';
-import SortCustomersByIdFilter from './filters/sort-customers-by-id-filter';
-import PrintCustomersAction from './actions/print-customers-action';
-import Workflow from './workflow/workflow';
+import SolutionWorkflow, { DUBLIN_COORDINATES } from './workflow/solution-workflow';
 
-const DUBLIN_COORDINATES: Coordinate = { latitude: 53.339428, longitude: -6.257664 };
-const fileinput = process.argv[2] || 'input.txt';
+const fileinput = process.argv[2] || './data/input.txt';
 const distanceKm = parseInt(process.argv[3] || '100');
+const sourcePoint: Coordinate = {
+    longitude: parseFloat(process.argv[4]) || DUBLIN_COORDINATES.longitude,
+    latitude: parseFloat(process.argv[5]) || DUBLIN_COORDINATES.latitude
+};
 
-const customerLoader = new CustomerLoaderFileSystem(fileinput);
-const distanceCalculator = new DistanceCalculatorImpl();
-const filters = [
-    new CloseCustomersFilter(
-        distanceCalculator,
-        DUBLIN_COORDINATES,
-        distanceKm),
-    new SortCustomersByIdFilter()
-];
-const postActions = [
-    new PrintCustomersAction()
-];
-
-new Workflow(customerLoader, filters, postActions).Solve();
+new SolutionWorkflow(fileinput, distanceKm, sourcePoint).Run();

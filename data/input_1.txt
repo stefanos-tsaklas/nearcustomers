@@ -1,0 +1,10 @@
+{"latitude": "53", "user_id": 91, "name": "41.27 km away", "longitude": "-6"}
+{"latitude": "54", "user_id": 82, "name": "75.39 km away", "longitude": "-6"}
+{"latitude": "54.25", "user_id": 44, "name": "102.66 km away", "longitude": "-6"}
+{"latitude": "53.3", "user_id": 1, "name": "83.65 km away", "longitude": "-5"}
+{"latitude": "53.3", "user_id": 32, "name": "50.52 km away", "longitude": "-5.5"}
+{"latitude": "60", "user_id": 14, "name": "1008.13 km away", "longitude": "5"}
+{"latitude": "90", "user_id": 67, "name": "4076.47 km away", "longitude": "90"}
+{"latitude": "0", "user_id": 44, "name": "5959.28 km away", "longitude": "0"}
+{"latitude": "-90", "user_id": 21, "name": "15938.62 km away", "longitude": "-90"}
+{"latitude": "90", "user_id": 21, "name": "4076.47 km away", "longitude": "180"}

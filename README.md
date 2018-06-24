@@ -27,5 +27,6 @@ so that we can switch implementations for some step, solve similar problems, and
 
 # TODO:
 
-1. Add different implementations of interfaces (e.g. get input customers or calculate distance by calling api via http)
+1. Add different implementations of interfaces (e.g. get input customers or calculate distance by calling api via http - this might need to change interface to use Promise)
+2. When you run npm run lint you get an error about semicolon after exporting default module
 2. Benchmark performance

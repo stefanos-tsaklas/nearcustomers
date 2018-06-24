@@ -2,7 +2,7 @@
     1. git clone https://github.com/stefanos-tsaklas/nearcustomers.git
     2. npm install -g ts-node
     3. npm install
-    4. npm run demo ./main.ts ./data/input.txt <optional file name> <optional distance in km> <optional longitute> <optional latitude>
+    4. npm run demo
 
 # Example usage:
     1. npm run demo
@@ -26,4 +26,4 @@ so that we can switch implementations for some step, solve similar problems, and
 # TODO:
 
 1. Add different implementations of interfaces (e.g. get input customers or calculate distance by calling api via http)
-3. Benchmark performance
+2. Benchmark performance
